@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Samim-FD";
+  src: url("font/Samim.woff") format("woff");
+}
+:root {
+  --bacground_linear_bottom: #171717;
+  --bacground_linear_top: #444444;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #171717;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #da0037;
+}
+body {
+  font-family: "Samim-FD", sans-serif;
+  background: linear-gradient(
+    var(--bacground_linear_top),
+    var(--bacground_linear_bottom)
+  );
+}
+.container {
+  width: 100%;
+  /* height: 100vh; */
+}
+.main-nav {
+  display: flex;
+  flex-direction: column;
+}
+.poster {
+  display: flex;
+  justify-content: center;
+  /* align-items: flex-end; */
+  width: 100%;
+  height: 635px;
+  background: linear-gradient(transparent, var(--bacground_linear_bottom)),
+    url("Hamed\ Homayoun\ -\ Hakeme\ Ehsas.png") center 0 / cover fixed;
+}
+.poster h1 {
+  /* display: flex; */
+  align-self: flex-end;
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  margin-bottom: 10px;
+  color: #da0037;
+  font-size: 60px;
+  font-weight: 900;
+}
+/* .poster img {
+  width: 80%;
+  height: 100%;
+} */
+.nav-bar {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  z-index: 1000;
+  background-color: #171717;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+}
+.nav-bar .logo a {
+  font-size: 45px;
+  text-decoration: none;
+  color: #ededed;
+}
+.nav-bar .logo span {
+  color: #da0037;
+}
+.nav-bar .nav-list {
+  display: flex;
+}
+.nav-bar .nav-list .list-item {
+  list-style-type: none;
+  margin: 15px;
+}
+.nav-bar .nav-list .list-item .list-link {
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #ededed;
+  transition: color 0.3s;
+}
+.nav-bar .nav-list .list-item .list-link:hover {
+  color: #da0037;
+}
+
+/* content */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #171717;
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+}
+.content .banner-box .banner {
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  transition: box-shadow 0.3s;
+}
+.content .banner-box .banner:hover {
+  box-shadow: 0 0 20px #da0037;
+}
+.content .text-content {
+  text-align: center;
+  margin-top: 50px;
+}
+.content .text-content h2 {
+  font-size: 40px;
+  color: #da0037;
+}
+.content .text-content p {
+  font-size: 18px;
+  color: #ededed;
+}
